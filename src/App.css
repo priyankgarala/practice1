@@ -1,0 +1,151 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* App Container */
+.App {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* User Section */
+h1 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #555;
+}
+
+/* Input Section */
+input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Button Colors */
+button:hover {
+  opacity: 0.9;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button.delete {
+  background-color: #dc3545;
+}
+
+button.delete:hover {
+  background-color: #b72a3a;
+}
+
+button.undo {
+  background-color: #ffc107;
+}
+
+button.undo:hover {
+  background-color: #e6a800;
+}
+
+/* Tasks Section */
+.tasks {
+  margin-top: 20px;
+}
+
+.tasks > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #fefefe;
+}
+
+/* Task Name and Buttons Flex */
+.tasks > div > .task-content {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.task-content p {
+  margin: 0;
+  font-size: 1rem;
+  flex: 1;
+}
+
+/* Buttons Container */
+.task-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.task-buttons button {
+  flex: none;
+}
+
+/* Completed Task Background */
+.tasks > div > .task-content {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.tasks > div[style*="background-color: green"] .task-content {
+  background-color: green !important;
+  color: white;
+}
+
+.user{
+  display: flex;
+  gap: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .tasks > div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
